@@ -82,3 +82,128 @@ func strStr(haystack: String, _ needle: String) -> Int {
     
     return -1
 }
+
+/**
+ ### 205. Isomorphic Strings  
+ 
+ Given two strings s and t, determine if they are isomorphic.
+ 
+ Two strings are isomorphic if the characters in s can be replaced to get t.
+ 
+ All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.
+ 
+ For example,
+ Given "egg", "add", return true.
+ 
+ Given "foo", "bar", return false.
+ 
+ Given "paper", "title", return true.
+ 
+ Note:
+ You may assume both s and t have the same length.
+ */
+func isIsomorphic(s: String, _ t: String) -> Bool {
+    if s.characters.count != t.characters.count {
+        return false
+    }
+    
+    let sCharacters = [Character](s.characters)
+    let tCharacters = [Character](t.characters)
+    
+    var s2tMap = [Character: Character]()
+    var t2sMap = [Character: Character]()
+    
+    for index in 0 ..< sCharacters.count {
+        let characterInS = sCharacters[index]
+        let characterInT = tCharacters[index]
+        
+        if s2tMap[characterInS] == nil && t2sMap[characterInT] == nil {
+            s2tMap[characterInS] = characterInT
+            t2sMap[characterInT] = characterInS
+        } else if s2tMap[characterInS] != characterInT || t2sMap[characterInT] != characterInS {
+            return false
+        }
+    }
+    
+    return true
+}
+
+/**
+ # 344 Reverse String 
+ https://leetcode.com/problems/reverse-string/
+ */
+func reverseString(s: String) -> String {
+    if s.characters.count <= 1 {
+        return s
+    }
+    
+    let middleIndex = s.startIndex.advancedBy(s.characters.count / 2)
+    let leftHalf = s.substringToIndex(middleIndex)
+    let rightHalf = s.substringFromIndex(middleIndex)
+    
+    return reverseString(rightHalf) + reverseString(leftHalf)
+    
+//    return String(s.characters.reverse())
+}
+
+/**
+ ## 345 Reverse Vowels of a String
+ https://leetcode.com/problems/reverse-vowels-of-a-string/
+ */
+func reverseVowels(s: String) -> String {
+
+    struct Stack<Element> {
+        
+        var container = [Element]()
+        
+        mutating func push(element: Element) {
+            container.append(element)
+        }
+        
+        mutating func pop() -> Element? {
+            guard container.count != 0 else { return nil }
+            return container.removeLast()
+        }
+    }
+    var result = s
+    let vowels = Set<Character>(["A","E","I","O","U","a","e","i","o","u"])
+    var stack = Stack<Character>()
+    var vowelIndexs: [String.CharacterView.Index] = []
+    for index in s.startIndex ..< s.endIndex {
+        let char = s.characters[index]
+        if vowels.contains(char) {
+            vowelIndexs.append(index)
+            stack.push(char)
+        }
+    }
+    
+    for index in vowelIndexs {
+        guard let char = stack.pop() else { break }
+        result.replaceRange(index ..< index.successor(), with: String(char))
+    }
+    return result
+    
+}
+
+
+/**
+ ## 58. Length of Last Word
+ https://leetcode.com/problems/length-of-last-word/
+ */
+func lengthOfLastWord(s: String) -> Int {
+    if s == "" {
+        return 0
+    }
+    
+    let strings = s.componentsSeparatedByString(" ")
+    
+    for i in 0 ..< strings.count {
+        let index = strings.count - 1 - i
+        if strings[index] != "" {
+            return strings[index].characters.count
+        }
+    }
+    
+    return 0
+}
+

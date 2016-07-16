@@ -10,8 +10,8 @@
 
 import Foundation
 
+let test = "a   "
 let start = CFAbsoluteTimeGetCurrent()
-let result = strStr("abccccfff","fff")
+let result = lengthOfLastWord(test)
 print(String(CFAbsoluteTimeGetCurrent() - start) + " seconds")
 print(result)
-
