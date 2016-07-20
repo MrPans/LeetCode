@@ -207,3 +207,70 @@ func lengthOfLastWord(s: String) -> Int {
     return 0
 }
 
+/**
+ ## 242. Valid Anagram
+ https://leetcode.com/problems/valid-anagram/
+ */
+func isAnagram(s: String, _ t: String) -> Bool {
+    guard s.characters.count == t.characters.count else { return false }
+    
+    return s.characters.sort(<) == t.characters.sort(<)
+}
+
+/**
+ 14. Longest Common Prefix
+ https://leetcode.com/problems/longest-common-prefix/
+ just need compare the longest String and the shortest Sting.
+ */
+func longestCommonPrefix(strs: [String]) -> String {
+    if (strs.count == 0) {
+        return ""
+    }
+    
+    let sortedStrings = strs.sort(<)
+    let shortest = sortedStrings.first!.characters
+    let longest = sortedStrings.last!.characters
+    var i = 0
+    while (i <  shortest.count && shortest[shortest.startIndex.advancedBy(i)] == longest[longest.startIndex.advancedBy(i)]) {
+        i += 1
+    };
+    let startIndex = sortedStrings.first!.startIndex
+    return sortedStrings.first![ startIndex ..< startIndex.advancedBy(i)];
+}
+
+/**
+ ## 290. Word Pattern
+ https://leetcode.com/problems/word-pattern/
+ */
+func wordPattern(pattern: String, _ str: String) -> Bool {
+    if str == "" || pattern == "" {
+        return false
+    }
+    
+    let letters = [Character](pattern.characters)
+    let words = str.componentsSeparatedByString(" ")
+    
+    if letters.count != words.count {
+        return false
+    }
+    
+    var letterMapWord = [Character : String]()
+    var wordMapLetter = [String : Character]()
+    
+    for index in 0 ..< letters.count {
+        let letter = letters[index]
+        let word = words[index]
+        
+        let cachedWord = letterMapWord[letter]
+        let cachedLetter = wordMapLetter[word]
+        if cachedWord == nil && cachedLetter == nil {
+            letterMapWord[letter] = word
+            wordMapLetter[word] = letter
+        } else if letter != cachedLetter || word != cachedWord {
+            return false
+        }
+    }
+    
+    return true
+
+}
