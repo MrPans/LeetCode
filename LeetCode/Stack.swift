@@ -124,8 +124,15 @@ func evalRPN(tokens: [String]) -> Int {
     }
     
     return stack.topElement ?? 0
-    
 }
+
+/**
+ ## 71. Simplify Path
+ https://leetcode.com/problems/simplify-path/
+ */
+//func simplifyPath(path: String) -> String {
+//    
+//}
 
 
 

@@ -12,6 +12,5 @@ import Foundation
 
 
 let start = CFAbsoluteTimeGetCurrent()
-let result = ""
 print(String(CFAbsoluteTimeGetCurrent() - start) + " seconds")
-print(result)
+//print(result)
