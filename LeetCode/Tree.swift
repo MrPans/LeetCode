@@ -68,5 +68,83 @@ func isSameTree(p: TreeNode?, _ q: TreeNode?) -> Bool {
     let sameRight = isSameTree(p!.right, q!.right)
     
     return sameValue && sameLeft && sameRight
+}
+
+/**
+ ## 101 Symmetric Tree
+ https://leetcode.com/problems/symmetric-tree/
+ */
+func isSymmetric(root: TreeNode?) -> Bool {
+    if root == nil {
+        return true
+    }
+    return isSy(root!.left, right: root!.right)
+}
+
+private func isSy(left: TreeNode?, right: TreeNode?) -> Bool {
+    if left == nil && right == nil {
+        return true
+    }
+    if left == nil || right == nil || left!.val != right!.val {
+        return false
+    }
+    
+    return isSy(left!.left, right: right!.right) && isSy(left!.right, right: right!.left)
+}
+
+/**
+ ## 226. Invert Binary Tree
+ https://leetcode.com/problems/invert-binary-tree/
+ */
+func invertTree(root: TreeNode?) -> TreeNode? {
+    if root?.left == nil && root?.right == nil {
+        return root
+    }
+    let invertedLeft = invertTree(root?.left)
+    let invertedRight = invertTree(root?.right)
+    root?.left = invertedRight
+    root?.right = invertedLeft
+    return root
+}
+
+
+/**
+ ## 111. Minimum Depth of Binary Tree
+  https://leetcode.com/problems/minimum-depth-of-binary-tree/
+ */
+func minDepth(root: TreeNode?) -> Int {
+    guard let root = root else { return 0 }
+    return minDep(root)
+}
+
+private func minDep(root: TreeNode?) -> Int {
+    guard let root = root else { return Int.max }
+    if root.left == nil && root.right == nil {
+        return 1
+    }
+    return min(minDep(root.left), minDep(root.right)) + 1
+}
+
+/**
+ 104. Maximum Depth of Binary Tree
+ https://leetcode.com/problems/maximum-depth-of-binary-tree/
+ */
+func maxDepth(root: TreeNode?) -> Int {
+    guard let root = root else { return 0 }
+    return maxDep(root)
+}
+
+private func maxDep(root: TreeNode?) -> Int {
+    guard let root = root else { return Int.min }
+    if root.left == nil && root.right == nil {
+        return 1
+    }
+    return max(maxDep(root.left), maxDep(root.right)) + 1
+}
+
+
+func isBalanced(root: TreeNode?) -> Bool {
     
 }
+
+
