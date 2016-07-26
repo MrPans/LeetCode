@@ -13,6 +13,8 @@
 		3B7250821D34C8820097BE38 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7250811D34C8820097BE38 /* main.swift */; };
 		3B7250891D34CA3A0097BE38 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7250881D34CA3A0097BE38 /* Array.swift */; };
 		3B90E2F71D37858000B964EF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90E2F61D37858000B964EF /* String.swift */; };
+		3B9752E41D44F405005E869E /* DP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9752E31D44F405005E869E /* DP.swift */; };
+		3BEF0C351D41DB3300BF2D6B /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0C341D41DB3300BF2D6B /* Other.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,8 @@
 		3B7250811D34C8820097BE38 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3B7250881D34CA3A0097BE38 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		3B90E2F61D37858000B964EF /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3B9752E31D44F405005E869E /* DP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DP.swift; sourceTree = "<group>"; };
+		3BEF0C341D41DB3300BF2D6B /* Other.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				3B7250811D34C8820097BE38 /* main.swift */,
+				3B9752E31D44F405005E869E /* DP.swift */,
 				3B3796041D3F4B8E0041D655 /* Tree.swift */,
 				3B7250881D34CA3A0097BE38 /* Array.swift */,
 				3B90E2F61D37858000B964EF /* String.swift */,
 				3B3796001D3E7D420041D655 /* LinkedList.swift */,
 				3B3796021D3F2C4E0041D655 /* Stack.swift */,
+				3BEF0C341D41DB3300BF2D6B /* Other.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 				3B3796051D3F4B8E0041D655 /* Tree.swift in Sources */,
 				3B7250821D34C8820097BE38 /* main.swift in Sources */,
 				3B7250891D34CA3A0097BE38 /* Array.swift in Sources */,
+				3BEF0C351D41DB3300BF2D6B /* Other.swift in Sources */,
 				3B3796011D3E7D420041D655 /* LinkedList.swift in Sources */,
+				3B9752E41D44F405005E869E /* DP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

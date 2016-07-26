@@ -10,7 +10,7 @@
 
 import Foundation
 
-
 let start = CFAbsoluteTimeGetCurrent()
+let result = climbStairs(30)
 print(String(CFAbsoluteTimeGetCurrent() - start) + " seconds")
-//print(result)
+print(result)

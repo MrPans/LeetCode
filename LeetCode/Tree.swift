@@ -143,8 +143,44 @@ private func maxDep(root: TreeNode?) -> Int {
 }
 
 
+/**
+ ## Balance Tree
+ https://leetcode.com/problems/balanced-binary-tree/
+ bottom to top search.
+ */
 func isBalanced(root: TreeNode?) -> Bool {
+    guard let root = root else {
+        return true
+    }
     
+    if dfsHeight(root) == -1 {
+        return false
+    }
+    
+    return true
+}
+
+private func dfsHeight(root: TreeNode?) -> Int {
+    guard let root = root else {
+        return 0
+    }
+    
+    // check left and right subtree
+    let leftHeight = dfsHeight(root.left)
+    if leftHeight == -1 {
+        return -1
+    }
+    let rightHeight = dfsHeight(root.right)
+    if rightHeight == -1 {
+        return -1
+    }
+    
+    // check current
+    if abs(leftHeight - rightHeight) > 1 {
+        return -1
+    }
+    
+    return max(leftHeight, rightHeight) + 1
 }
 
 
