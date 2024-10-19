@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BC9E73E2CC3519700406501 /* TwoPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9E73D2CC3519700406501 /* TwoPointer.swift */; };
+		3BC9E7402CC351DE00406501 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9E73F2CC351DE00406501 /* Base.swift */; };
 		EA05A5AE2479727D0087C03D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05A5AD2479727D0087C03D /* main.swift */; };
 		EA6F50F6247AAD2A008C5253 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F50F5247AAD2A008C5253 /* Stack.swift */; };
 		EA6F50F8247AADB5008C5253 /* Easy01.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F50F7247AADB5008C5253 /* Easy01.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3BC9E73D2CC3519700406501 /* TwoPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPointer.swift; sourceTree = "<group>"; };
+		3BC9E73F2CC351DE00406501 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		EA05A5AA2479727D0087C03D /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA05A5AD2479727D0087C03D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EA6F50F5247AAD2A008C5253 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				EA05A5AD2479727D0087C03D /* main.swift */,
+				3BC9E73F2CC351DE00406501 /* Base.swift */,
+				3BC9E73D2CC3519700406501 /* TwoPointer.swift */,
 				EA6F50F5247AAD2A008C5253 /* Stack.swift */,
 				EA6F50F7247AADB5008C5253 /* Easy01.swift */,
 			);
@@ -128,6 +134,8 @@
 			files = (
 				EA05A5AE2479727D0087C03D /* main.swift in Sources */,
 				EA6F50F6247AAD2A008C5253 /* Stack.swift in Sources */,
+				3BC9E7402CC351DE00406501 /* Base.swift in Sources */,
+				3BC9E73E2CC3519700406501 /* TwoPointer.swift in Sources */,
 				EA6F50F8247AADB5008C5253 /* Easy01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
