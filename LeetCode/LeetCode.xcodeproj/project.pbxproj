@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3BC9E73E2CC3519700406501 /* TwoPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9E73D2CC3519700406501 /* TwoPointer.swift */; };
 		3BC9E7402CC351DE00406501 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9E73F2CC351DE00406501 /* Base.swift */; };
+		3BE2AC592CCC3BFF00A75400 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2AC582CCC3BFF00A75400 /* Other.swift */; };
+		3BE2AC5B2CCC49E300A75400 /* LeetCode.9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2AC5A2CCC49E300A75400 /* LeetCode.9.swift */; };
+		3BE2AC5D2CCC4E1700A75400 /* LeetCode.13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2AC5C2CCC4E1700A75400 /* LeetCode.13.swift */; };
+		3BE2AC5F2CCC655E00A75400 /* LeetCode.12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2AC5E2CCC655E00A75400 /* LeetCode.12.swift */; };
+		3BE2AC612CCC692700A75400 /* LeetCode.14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2AC602CCC692700A75400 /* LeetCode.14.swift */; };
 		EA05A5AE2479727D0087C03D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05A5AD2479727D0087C03D /* main.swift */; };
 		EA6F50F6247AAD2A008C5253 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F50F5247AAD2A008C5253 /* Stack.swift */; };
 		EA6F50F8247AADB5008C5253 /* Easy01.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F50F7247AADB5008C5253 /* Easy01.swift */; };
@@ -29,6 +34,11 @@
 /* Begin PBXFileReference section */
 		3BC9E73D2CC3519700406501 /* TwoPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPointer.swift; sourceTree = "<group>"; };
 		3BC9E73F2CC351DE00406501 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		3BE2AC582CCC3BFF00A75400 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
+		3BE2AC5A2CCC49E300A75400 /* LeetCode.9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.9.swift; sourceTree = "<group>"; };
+		3BE2AC5C2CCC4E1700A75400 /* LeetCode.13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.13.swift; sourceTree = "<group>"; };
+		3BE2AC5E2CCC655E00A75400 /* LeetCode.12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.12.swift; sourceTree = "<group>"; };
+		3BE2AC602CCC692700A75400 /* LeetCode.14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.14.swift; sourceTree = "<group>"; };
 		EA05A5AA2479727D0087C03D /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA05A5AD2479727D0087C03D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EA6F50F5247AAD2A008C5253 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -68,6 +78,11 @@
 				EA05A5AD2479727D0087C03D /* main.swift */,
 				3BC9E73F2CC351DE00406501 /* Base.swift */,
 				3BC9E73D2CC3519700406501 /* TwoPointer.swift */,
+				3BE2AC582CCC3BFF00A75400 /* Other.swift */,
+				3BE2AC5A2CCC49E300A75400 /* LeetCode.9.swift */,
+				3BE2AC5C2CCC4E1700A75400 /* LeetCode.13.swift */,
+				3BE2AC5E2CCC655E00A75400 /* LeetCode.12.swift */,
+				3BE2AC602CCC692700A75400 /* LeetCode.14.swift */,
 				EA6F50F5247AAD2A008C5253 /* Stack.swift */,
 				EA6F50F7247AADB5008C5253 /* Easy01.swift */,
 			);
@@ -132,8 +147,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE2AC592CCC3BFF00A75400 /* Other.swift in Sources */,
 				EA05A5AE2479727D0087C03D /* main.swift in Sources */,
+				3BE2AC5F2CCC655E00A75400 /* LeetCode.12.swift in Sources */,
+				3BE2AC5B2CCC49E300A75400 /* LeetCode.9.swift in Sources */,
+				3BE2AC5D2CCC4E1700A75400 /* LeetCode.13.swift in Sources */,
 				EA6F50F6247AAD2A008C5253 /* Stack.swift in Sources */,
+				3BE2AC612CCC692700A75400 /* LeetCode.14.swift in Sources */,
 				3BC9E7402CC351DE00406501 /* Base.swift in Sources */,
 				3BC9E73E2CC3519700406501 /* TwoPointer.swift in Sources */,
 				EA6F50F8247AADB5008C5253 /* Easy01.swift in Sources */,
