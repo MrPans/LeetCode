@@ -198,8 +198,8 @@ class MyLinkedList {
             print(-1)
             return -1
         } else {
-            print(result.val)
-            return result.val
+            print(result.val != NSNotFound ? result.val : -1)
+            return result.val != NSNotFound ? result.val : -1
         }
     }
     
@@ -211,7 +211,7 @@ class MyLinkedList {
             return
         }
         
-        var head = MyLinkedList()
+        let head = MyLinkedList()
         head.val = self.val
         self.val = val
         head.prev = self
@@ -221,8 +221,15 @@ class MyLinkedList {
     }
     
     func addAtTail(_ val: Int) {
+        
+        guard self.val != NSNotFound
+        else {
+            self.val = val
+            return
+        }
+        
         var current = self
-        var newNode = MyLinkedList()
+        let newNode = MyLinkedList()
         newNode.val = val
         while current.next != nil {
             current = current.next!
@@ -248,15 +255,16 @@ class MyLinkedList {
             destinationNode = destinationNode?.next
         }
         
-        var node = MyLinkedList()
+        let node = MyLinkedList()
         node.val = val
         
-        let previous = destinationNode.prev
-        previous?.next = node
-        node.prev = previous
+        let prev = destinationNode
+        let next = destinationNode?.next
         
-        node.next = destinationNode
-        destinationNode.prev = node
+        node.prev = prev
+        node.next = next
+        prev?.next = node
+        next?.prev = node
         print(self)
     }
     
@@ -272,29 +280,20 @@ class MyLinkedList {
             return
         }
         
-        var destinationNode = self
-        var currentIndex = 0
-        
-        while currentIndex < index && destinationNode.next != nil {
-            destinationNode = destinationNode.next!
-            currentIndex += 1
+        var destinationNode: MyLinkedList? = self
+        for _ in 0 ..< index - 1 {
+            destinationNode = destinationNode?.next
         }
         
-        // Check if we actually reached the requested index
-        guard currentIndex == index else {
-            return
-        }
-        
-        let previous = destinationNode.prev
-        let next = destinationNode.next
-        
-        previous?.next = next
-        next?.prev = previous
+        let needDelete = destinationNode?.next
+        needDelete?.next?.prev = destinationNode
+        destinationNode?.next = needDelete?.next
         print(self)
     }
 
     func removeFirst() {
          guard let next = self.next else {
+            self.val = NSNotFound
             return
         }
         
