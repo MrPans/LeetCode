@@ -10,8 +10,17 @@ import Foundation
 
 class LeetCode_141: LeetCodeSolution {
     func hasCycle(_ head: ListNode?) -> Bool  {
-        // TODO: Implement your solution here
+        var slow = head
+        var fast = head
+        while fast != nil && fast?.next != nil {
+            fast = fast?.next?.next
+            slow = slow?.next
+            if slow === fast {
+                return true
+            }
+        }
         
+        return false
     }
     
     override func url() -> String {
@@ -20,6 +29,14 @@ class LeetCode_141: LeetCodeSolution {
     
     override func main() {
         // Test cases from LeetCode:
- 
+        let testCase0 = ListNode([3,2,0,-4])
+        let result0 = hasCycle(testCase0)
+        print(result0)
+        
+        let testCase1 = ListNode([1])
+        let result1 = hasCycle(testCase1)
+        print(result1)
+        
+        
     }
 }
