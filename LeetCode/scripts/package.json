@@ -1,0 +1,13 @@
+{
+  "name": "leetcode-generator",
+  "version": "1.0.0",
+  "description": "LeetCode solution file generator",
+  "main": "leetcode-gen.js",
+  "scripts": {
+    "gen": "node leetcode-gen.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "commander": "^11.1.0"
+  }
+} 
