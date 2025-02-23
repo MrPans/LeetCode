@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_7_ReverseInteger {
+class LeetCode_7: LeetCodeSolution {
     func reverse(_ x: Int) -> Int {
         var isNegative = x < 0
         var temp = isNegative ? -x : x
@@ -26,15 +26,12 @@ class LeetCode_7_ReverseInteger {
         result = result * 10 + temp
         return isNegative ? -result : result
     }
-}
-
-extension LeetCode_7_ReverseInteger: LeetCodeBase {
     
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/reverse-integer/"
     }
     
-    func main() {
+    override func main() {
     
         let testCase = 123
         let testCase2 = -123

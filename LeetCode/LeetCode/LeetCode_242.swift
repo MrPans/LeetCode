@@ -9,7 +9,7 @@
 
 import Foundation
 
-class LeetCode_242 {
+class LeetCode_242: LeetCodeSolution {
     
     func isAnagram(_ s: String, _ t: String) -> Bool {
         var dict = [Character: Int]()
@@ -33,15 +33,12 @@ class LeetCode_242 {
         
         return dict.isEmpty
     }
-}
 
-extension LeetCode_242: LeetCodeBase {
-    
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/valid-anagram/"
     }
     
-    func main() {
+    override func main() {
         var s = "cat"
         var t = "car"
         var result = isAnagram(s, t)

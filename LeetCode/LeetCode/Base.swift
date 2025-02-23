@@ -8,26 +8,13 @@
 
 import Foundation
 
-protocol Solution {
+@objc protocol Solution: NSObjectProtocol {
     func run()
     func main()
     func sayHello()
 }
 
-extension Solution where Self: LeetCodeDescription {
-    
-    func run() {
-        sayHello()
-        main()
-    }
-    
-    func sayHello() {
-        print("start run leetcode solution for:")
-        print(url())
-    }
-}
-
-protocol LeetCodeDescription {
+@objc protocol LeetCodeDescription: NSObjectProtocol {
     func url() -> String
 }
 

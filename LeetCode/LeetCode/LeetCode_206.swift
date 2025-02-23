@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_206 {
+class LeetCode_206: LeetCodeSolution {
     func reverseList(_ head: ListNode?) -> ListNode? {
         if head == nil || head?.next == nil {
             return head
@@ -41,16 +41,12 @@ class LeetCode_206 {
 //        }
 //        return head
 //    }
-}
 
-extension LeetCode_206: LeetCodeBase {
-    
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/reverse-linked-list/"
     }
     
-    func main() {
-        var strs = [1,2,3,4,5]
+    override func main() {
         var result = reverseList(ListNode([1,2,3,4,5]))
         print(result)
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_14 {
+class LeetCode_14: LeetCodeSolution {
     func longestCommonPrefix(_ strs: [String]) -> String {
         var result: String? = nil
         
@@ -33,21 +33,13 @@ class LeetCode_14 {
         
         return result ?? ""
     }
-}
 
-extension LeetCode_14: LeetCodeBase {
-    
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/longest-common-prefix/"
     }
     
-    func main() {
-    
-//        let testCase = ["flower","flow","flight"]
-//        let testCase2 = ["dog","racecar","car"]
+    override func main() {
         let testCase3 = ["","b"]
-//        print(longestCommonPrefix(testCase))
-//        print(longestCommonPrefix(testCase2))
         print(longestCommonPrefix(testCase3))
     }
 }

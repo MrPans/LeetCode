@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_283 {
+class LeetCode_283: LeetCodeSolution {
     
     func moveZeroes(_ nums: inout [Int]) {
         
@@ -33,22 +33,14 @@ class LeetCode_283 {
         }
         return slow
     }
-}
-
-extension LeetCode_283: LeetCodeBase {
     
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/move-zeroes"
     }
     
-    func main() {
-    
-//        let testCase = ["flower","flow","flight"]
-//        let testCase2 = ["dog","racecar","car"]
+    override func main() {
         var testCase3 = [0,1,0,3,12]
         moveZeroes(&testCase3)
-//        print(longestCommonPrefix(testCase))
-//        print(longestCommonPrefix(testCase2))
         print(testCase3)
     }
 }

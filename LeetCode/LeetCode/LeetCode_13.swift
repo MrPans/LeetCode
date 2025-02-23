@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_13_RomanToInteger {
+class LeetCode_13: LeetCodeSolution {
     func romanToInt(_ s: String) -> Int {
         
         let dict: [Character: Int] = [
@@ -36,15 +36,12 @@ class LeetCode_13_RomanToInteger {
         
         return result
     }
-}
-
-extension LeetCode_13_RomanToInteger: LeetCodeBase {
     
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/roman-to-integer/"
     }
     
-    func main() {
+    override func main() {
     
         let testCase = "III"
         let testCase2 = "LVIII"

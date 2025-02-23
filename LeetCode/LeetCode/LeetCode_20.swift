@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_20 {
+class LeetCode_20: LeetCodeSolution {
     
     func isValid(_ s: String) -> Bool {
         guard !s.isEmpty else { return false }
@@ -33,15 +33,12 @@ class LeetCode_20 {
         }
         return stack.isEmpty && !isInvaild
     }
-}
-
-extension LeetCode_20: LeetCodeBase {
     
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/valid-parentheses/"
     }
     
-    func main() {
+    override func main() {
         var testCase = "()((()))"
         var result = isValid(testCase)
         print(result)

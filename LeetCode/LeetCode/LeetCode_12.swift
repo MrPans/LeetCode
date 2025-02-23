@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_12 {
+class LeetCode_12: LeetCodeSolution {
     func intToRoman(_ num: Int) -> String {
 
         let dict: [Int: String] = [
@@ -48,15 +48,12 @@ class LeetCode_12 {
         
         return result
     }
-}
 
-extension LeetCode_12: LeetCodeBase {
-    
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/integer-to-roman/"
     }
     
-    func main() {
+   override func main() {
     
         let testCase = 3749
         let testCase2 = 58

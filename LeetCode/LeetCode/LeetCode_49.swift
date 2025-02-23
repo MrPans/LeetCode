@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_49 {
+class LeetCode_49: LeetCodeSolution {
     
     func groupAnagrams(_ strs: [String]) -> [[String]] {
         typealias Key = [Character : Int]
@@ -31,15 +31,12 @@ class LeetCode_49 {
         }
         return dict
     }
-}
-
-extension LeetCode_49: LeetCodeBase {
     
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/group-anagrams"
     }
     
-    func main() {
+    override func main() {
         var strs = ["eat","tea","tan","ate","nat","bat"]
         var result = groupAnagrams(strs)
         print(result)

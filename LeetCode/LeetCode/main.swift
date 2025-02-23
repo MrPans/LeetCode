@@ -8,26 +8,11 @@
 
 import Foundation
 
-//print(Easy01().missingNumber([0]))
-//LeetCode_14().run()
-/*
- ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get","get","deleteAtIndex","deleteAtIndex","get","deleteAtIndex","get"]
- [[],[1],[3],[1,2],[1],[1],[1],[3],[3],[0],[0],[0],[0]]
+// 运行最新添加的解决方案
+print("=== Running latest solution ===")
+SolutionManager.shared.runLatest()
 
- */
-//var node = MyLinkedList()
-//node.addAtHead(1)
-//node.addAtTail(3)
-//node.addAtIndex(1, 2)
-//node.get(1)
-//node.deleteAtIndex(1)
-//node.get(1)
-//node.get(3)
-//node.deleteAtIndex(3)
-//node.deleteAtIndex(0)
-//node.get(0)
-//node.deleteAtIndex(0)
-//node.get(0)
-
-LeetCode_21().run()
+// 如果想运行所有解决方案，可以取消下面的注释
+// print("\n=== Running all solutions ===")
+// SolutionManager.shared.runAll()
 

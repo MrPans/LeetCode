@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeetCode_9_PalindromeNumber {
+class LeetCode_9_PalindromeNumber: LeetCodeSolution {
     func isPalindrome(_ x: Int) -> Bool {
         if x < 0 {
             return false
@@ -26,17 +26,13 @@ class LeetCode_9_PalindromeNumber {
         reverse = reverse * 10 + x
         
         return reverse == original
-        
     }
-}
-
-extension LeetCode_9_PalindromeNumber: LeetCodeBase {
     
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/palindrome-number/"
     }
     
-    func main() {
+    override func main() {
     
         let testCase = 121
         let testCase2 = -121

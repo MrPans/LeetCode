@@ -9,7 +9,7 @@
 import Foundation
 
 
-class LeetCode_11_ContainerWithMostWater {
+class LeetCode_11: LeetCodeSolution {
     func maxArea(_ height: [Int]) -> Int {
         var left = 0
         var right = height.count - 1
@@ -30,15 +30,12 @@ class LeetCode_11_ContainerWithMostWater {
 
         return maxWater
     }
-}
-
-extension LeetCode_11_ContainerWithMostWater: LeetCodeBase {
     
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/container-with-most-water/"
     }
     
-    func main() {
+    override func main() {
     
         let testCase = [1,8,6,2,5,4,8,3,7]
         let testCase2 = [1,1]

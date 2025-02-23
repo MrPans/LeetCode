@@ -8,7 +8,10 @@
 
 import Foundation
 
-class LeetCode_21 {
+// 如果 Basic.swift 在同一个模块中，不需要额外的导入
+// 如果在不同模块，需要导入对应的模块
+
+class LeetCode_21: LeetCodeSolution {
     
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         
@@ -41,16 +44,12 @@ class LeetCode_21 {
         
         return dummy?.next
     }
- 
-}
-
-extension LeetCode_21: LeetCodeBase {
     
-    func url() -> String {
+    override func url() -> String {
         return "https://leetcode.com/problems/merge-two-sorted-lists/"
     }
     
-    func main() {
+    override func main() {
         let list1 = [Int]()
         let list2 = [0]
         var result = mergeTwoLists(ListNode(list1), ListNode(list2))
